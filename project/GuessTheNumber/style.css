@@ -1,0 +1,27 @@
+body{
+    padding: 20%;
+    background-color:rgb(97, 125, 116);
+    font-size: 20px;
+}
+.guessSubmit{
+    background-color: black;
+    color:aliceblue;
+    display: block;
+    margin: 25px 100px 10px;
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+    border-style: none;
+    font-size: 15px;
+}
+#guess{
+    padding: 15px 25px;
+}
+#guessField{
+    height: 25px;
+
+}
+
+p{
+    color:rgb(29, 45, 46)
+}

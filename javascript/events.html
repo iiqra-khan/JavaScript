@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: slategrey; color: beige;">
+    <ul id = "images">
+        <li><img width = "200px" src="https://images.pexels.com/photos/1715161/pexels-photo-1715161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id = "umbrella"></li>
+
+        <li><img width = "200px"src="https://images.pexels.com/photos/1762186/pexels-photo-1762186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id = "alley"></li>
+
+        <li><img width = "200px" src="https://images.pexels.com/photos/15747244/pexels-photo-15747244/free-photo-of-car-and-motorcycle-on-road-between-trees.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id = "road" ></li>
+
+        <li><img width = "200px"src="https://images.pexels.com/photos/2448749/pexels-photo-2448749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id = "window"></li>
+
+        <li><img width = "200px"src="https://images.pexels.com/photos/751005/pexels-photo-751005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id = "branch"></li>
+
+        <li><a style="color: beige;" href="https://google.com" id = 'google'>Google</a></li>
+    </ul>
+
+
+
+<!-- 
+    js events run sequentially.
+    js is sequentially run language
+    events are evoked on an activity. 
+-->
+</body>
+<script>
+    // using onclick on button is not the optimal approach
+    // ------------ this approach is also not very optimal instead use eventlistener
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+    // document.getElementById('road').addEventListener('click', function(){
+    //     alert("road clicked")
+    // }, false)
+
+    // attachEvent() ---- on internet explorer
+    // jQuery - on
+
+
+    // EVENTS
+    // type, timestamp, defaultPrevented
+    // target, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+// event propogation
+    // two context
+    // event bubbling (false state), event capturing
+
+    // document.getElementById('images').addEventListener('click', function (e) {
+    // console.log("click insdide the ul")        
+    // }, false)
+
+    // document.getElementById('road').addEventListener('click', function (e) {
+    // console.log("owl clicked")   
+    // e.stopPropagation()     
+    // }, false)
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e);
+        // console.log(e.target);
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === 'IMG'){
+            console.log(e.ta);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    }, false)
+</script>
+</html>

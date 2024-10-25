@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <h1>JS tutorial</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayIq = function(){
+        console.log("iq");
+    }
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = 'this is my tutorial'
+    }
+    const chngeMe = setTimeout(changeText, 2000) // --- we are passing reference of sayIq instaed of executing it with sayIq()
+
+    // cleartimeout takes reference of the setTimeout we want to stop
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(chngeMe)
+    })
+
+    // setTimeout(function () {
+    //     console.log("iq");               
+    // }, 2000)
+</script>
+</html>

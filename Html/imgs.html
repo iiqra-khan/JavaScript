@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #b88dbc;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://wallpapers.com/images/high/free-to-rest-affirmation-oqh6ttbu8uhn0b9x.webp" width="200px" height="200px" alt="no image">
+    <img src="./ name.png" width="200px" height="200px" alt="no image">
+
+    <picture>
+        <source media = "(min-width: 650px)"srcset="pic 1"/>
+        <source media = "(min-width: 450px)"srcset="pic2"/>
+        <!-- based on the size of the browser the image will change -->
+        <img src="./name.png" alt=""> <!--this image will show only if abouve doesn't work-->
+    </picture>
+
+    <!-- image map generator -->
+     <map name="imqge-map">
+        <area onclick="one()" shape="rect" coords="" href="" alt="" title="">
+        <area onclick="two()" target="" shape="rect" coords="" href="" alt="" title="">
+     </map>
+
+
+<script>
+    function one(){
+        alert("you clicked on one")
+    }
+    function two(){
+        alert("you clicked on two")
+    }
+</script>
+</body>
+</html>

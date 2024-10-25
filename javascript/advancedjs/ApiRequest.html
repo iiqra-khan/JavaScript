@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body style = "background-color: #212121">
+</body>
+<script>
+    const requestUrl = 'https://randomuser.me/api/'
+   const xhr = new XMLHttpRequest() //xhr is a class we make its object with new
+   xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            // console.log(this.responseText);
+            const data = JSON.parse(this.responseText)
+            // console.log();
+            
+            console.log(data.results[0].name.first);
+            
+            
+        }
+        
+    }
+   console.log((xhr.readyState));
+   
+   xhr.send()
+</script>
+</html>
